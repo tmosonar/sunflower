@@ -20,11 +20,19 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil.setContentView
 import com.google.samples.apps.sunflower.databinding.ActivityGardenBinding
+import java.nio.charset.Charset
 
 class GardenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        try {
+            CompletelyUseless.parse("cant see the benefit", Charset.defaultCharset())
+        } catch (e: Exception) {
+
+        }
+
         setContentView<ActivityGardenBinding>(this, R.layout.activity_garden)
     }
 }
