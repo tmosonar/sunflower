@@ -61,6 +61,11 @@ class PlantTest {
         }
     }
 
+    @Test
+    fun covered() {
+        plant.covered()
+    }
+
     @Test fun test_toString() {
         assertEquals("Tomato", plant.toString())
     }
